@@ -44,7 +44,7 @@ def show_result():
     nn_model.fit(data.drop('Druivensoort', axis=1))
     distances, indices = nn_model.kneighbors(user_data.drop('Druivensoort', axis=1))
 
-    st.subheader("Top 5 Grape Recommendations")
+    st.subheader("Top 5 druif aanbevelingen")
     user_profile = user_data.drop('Druivensoort', axis=1).values
     top_grapes_indices = indices[0]
     top_grapes = data.iloc[top_grapes_indices]
@@ -63,7 +63,7 @@ def show_result():
     cluster_label = kmeans.predict(user_data.drop('Druivensoort', axis=1))
     cluster_data = data.iloc[kmeans.labels_ == cluster_label[0]]['Druivensoort']
     cluster_df = pd.DataFrame(cluster_data)
-    st.subheader("Similar Wines in Your Cluster")
+    st.subheader("Vergelijkbare druiven")
     st.table(cluster_data)
 
     labels = data.columns[1:]
@@ -77,7 +77,7 @@ def show_result():
     angles += [angles[0]]
 
     fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
-    ax.plot(angles, stats_user, 'o-', linewidth=2, label='Your Preferences', color='green')
+    ax.plot(angles, stats_user, 'o-', linewidth=2, label='Uw voorkeuren', color='green')
     ax.fill(angles, stats_user, color='green', alpha=0.25)
     ax.plot(angles, stats_top1, 'o-', linewidth=2, label='Top Match', color='blue')
     ax.fill(angles, stats_top1, color='blue', alpha=0.25)
@@ -92,5 +92,5 @@ def show_result():
 
     email = st.text_input("Enter your email address")
     if st.button("Send Results"):
-        html_content = f"<html><body><p>Here are your top 5 Grape Recommendations:</p>{match_df.to_html(index=False)}<br><p>Similar Wines in Your Cluster:</p>{cluster_df.to_html(index=False)}<br><img src='cid:plot' alt='Graph'></body></html>"
-        send_email(email, "Your Grape Recommendations", html_content, plot_buffer)
+        html_content = f"<html><body><p>Hier zijn uw top 5 aanbevolen druif soorten:</p>{match_df.to_html(index=False)}<br><p>Vergelijkbare druiven:</p>{cluster_df.to_html(index=False)}<br><img src='cid:plot' alt='Graph'></body></html>"
+        send_email(email, "Uw druif aanbeveling.", html_content, plot_buffer)
