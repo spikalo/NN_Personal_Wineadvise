@@ -28,7 +28,7 @@ Bijdragen aan de app zijn welkom! Zorg ervoor dat je de bestaande code stijl vol
 ## Licentie
 Dit project is gelicenseerd onder de MIT Licentie - zie het LICENSE bestand voor details.
 
-## ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ##
+## ++++++++++++++++++++++++++++++++++++++++++++++++++++++ ##
 
 # EN - Personalized Wine Advice App
 
