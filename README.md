@@ -20,6 +20,7 @@ De app is geïmplementeerd met behulp van Streamlit Share, waardoor gebruikers e
 
 ## Gebruik
 Navigeer naar de URL van de app op Streamlit Share of start het lokaal zoals hierboven beschreven. Volg de instructies op het scherm om je gegevens in te voeren en aanbevelingen te ontvangen.
+https://nnpersonalwineadvise.streamlit.app/
 
 ## Bijdragen
 Bijdragen aan de app zijn welkom! Zorg ervoor dat je de bestaande code stijl volgt en voeg waar nodig commentaar toe.
@@ -58,6 +59,7 @@ The app is deployed using Streamlit Share, allowing users to interact with it vi
 
 ## Usage
 Navigate to the app's URL on Streamlit Share or run it locally as described above. Follow the on-screen instructions to input your data and receive recommendations.
+https://nnpersonalwineadvise.streamlit.app/
 
 ## Contributing
 Contributions to the app are welcome! Please ensure to follow the existing code style and add comments where necessary.
