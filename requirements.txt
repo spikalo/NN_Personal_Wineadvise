@@ -2,4 +2,3 @@ matplotlib
 pandas
 scikit-learn
 streamlit
-smtplib
