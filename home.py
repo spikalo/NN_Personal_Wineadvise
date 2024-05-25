@@ -2,11 +2,11 @@ import streamlit as st
 import pandas as pd
 
 def show_home():
-    st.title("Personalized Wine Recommendation System")
+    st.title("Wijnadvies op maat")
     st.image("png/logo.jpg")  # Ensure the path to your actual logo is correct
 
     # Directly show the input box for the name
-    name = st.text_input("What's your name?", key='name_input')
+    name = st.text_input("Wat is uw naam?", key='name_input')
     
     if st.button("Save"):
         # Define the column names as specified
