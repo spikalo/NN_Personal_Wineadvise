@@ -20,7 +20,7 @@ def show_form():
         "2 Do you enjoy the flavors like lemon in your wine?",
         "3 How would you describe tolerance of acidic flavors in wine? do you prefer a spicy taste (5) or something more subtle (1)",
         "4 Do you prefer a light refreshing wine (1) or a heavier dry wine (5)?",
-        "5 How do you feel about the tartness of berries in your wine?"
+        "5 How do you feel about the tartness of berries in your wine?",
         "6 How important is the freshness that acid adds to a wine to you?"
     ])
     
