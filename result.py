@@ -56,7 +56,7 @@ def show_result():
         match_percentage = round(match_score * 100, 2)
         matches.append((data.iloc[index]['Druivensoort'], match_percentage))
 
-    match_df = pd.DataFrame(matches, columns=['Druivensoort', 'Match Percentage'])
+    match_df = pd.DataFrame(matches, columns=['Druivensoort', 'Match Percentage']).reset_index(drop=True)
     # Displaying the DataFrame without the index
     st.dataframe(match_df.style.hide(axis='index'))
 
