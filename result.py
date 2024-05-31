@@ -57,7 +57,7 @@ def show_result():
         matches.append((data.iloc[index]['Druivensoort'], match_percentage))
 
     match_df = pd.DataFrame(matches, columns=['Druivensoort', 'Match Percentage'])
-    st.table(match_df)
+    st.table(match_df.style.hide_index())
 
     kmeans = KMeans(n_clusters=4, random_state=0).fit(data.drop('Druivensoort', axis=1))
     cluster_label = kmeans.predict(user_data.drop('Druivensoort', axis=1))
