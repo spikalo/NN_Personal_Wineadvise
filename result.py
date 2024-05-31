@@ -58,7 +58,8 @@ def show_result():
 
     match_df = pd.DataFrame(matches, columns=['Druivensoort', 'Match Percentage']).reset_index(drop=True)
     # Displaying the DataFrame without the index
-    st.dataframe(match_df.style.hide(axis='index'))
+    #st.dataframe(match_df.style.hide(axis='index'))
+    st.write(match_df.to_html(index=False), unsafe_allow_html=True)
 
     kmeans = KMeans(n_clusters=4, random_state=0).fit(data.drop('Druivensoort', axis=1))
     cluster_label = kmeans.predict(user_data.drop('Druivensoort', axis=1))
