@@ -63,9 +63,9 @@ def show_result():
     kmeans = KMeans(n_clusters=4, random_state=0).fit(data.drop('Druivensoort', axis=1))
     cluster_label = kmeans.predict(user_data.drop('Druivensoort', axis=1))
     cluster_data = data.iloc[kmeans.labels_ == cluster_label[0]]['Druivensoort']
-    cluster_df = pd.DataFrame(cluster_data)
+    cluster_df = pd.DataFrame(cluster_data).reset_index(drop=True)
     st.subheader("Vergelijkbare druiven")
-    st.table(cluster_data)
+    st.table(cluster_df)  # Now this table also hides the index.
 
     labels = data.columns[1:]
     stats_user = user_data.iloc[0, 1:].tolist()
